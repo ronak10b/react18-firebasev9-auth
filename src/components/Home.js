@@ -1,6 +1,7 @@
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import { useUserAuth } from "../context/userAuthContext";
+import Basket from "./Basket";
 
 const Home = () => {
   const { logOut, user } = useUserAuth();
@@ -16,14 +17,17 @@ const Home = () => {
 
   return (
     <>
-      <div className="p-4 box mt-3 text-center">
-        Hello Welcome <br />
+      <div className="">
+        Hello Welcome <br /> {user.email}
       </div>
-      <div className="d-grid gap-2">
+      <div className="d-grid">
+        <Basket />
+      </div>
+      {/* <div className="d-grid gap-2">
         <Button variant="primary" onClick={handleLogout}>
           Log out
         </Button>
-      </div>
+      </div> */}
     </>
   );
 };

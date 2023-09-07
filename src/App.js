@@ -8,7 +8,7 @@ import Signup from "./components/Signup";
 
 function App() {
   return (
-    <Container style={{ width: "400px" }}>
+    <Container>
       <Row>
         <Col>
           <UserAuthContextProvider>
